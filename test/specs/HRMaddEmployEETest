@@ -1,0 +1,34 @@
+import { expect } from "chai";
+import L from "../pageobjects/HRM_LoginAndLogOutPAGE.js"
+import H from "../pageobjects/HRM_HOME_PAGE.js"
+import P from "../pageobjects/HRM_PIM_PAGE.js"
+import allure from "allure-commandline"
+describe("employee add ", async ()=>
+             {
+                it("loginToAdmin",async () =>
+                {
+                  await browser.url("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
+                  await  L.logInToTheApplicationAsAdmin()
+                   // await browser.$('//a[@href="/web/index.php/pim/viewPimModule"]').click()
+
+                })
+                it("addingemployeeWithcredentials",async () =>
+                {
+                    await browser.maximizeWindow()
+                    await H.pimButtom.click()
+                    await H.addButton.click()
+                    await P.addEmployeeFormFilling("aaron","keshav","xavier","500","aaron","1234567a")
+                    await browser.pause(5000)
+                     
+                  
+                })
+
+                it("logout",async ()=>
+                {
+                    
+                   L.logOutFRomTheApplication()
+                    
+                })
+
+                
+            })

@@ -1,0 +1,20 @@
+{
+  "name": "orange",
+  "type": "module",
+  "devDependencies": {
+    "@wdio/allure-reporter": "^8.27.0",
+    "@wdio/cli": "^8.26.3",
+    "@wdio/local-runner": "^8.26.3",
+    "@wdio/mocha-framework": "^8.26.3",
+    "@wdio/spec-reporter": "^8.26.3"
+  },
+  "scripts": {
+    "wdio": "wdio run ./wdio.conf.js",
+    "rmrf":"npx rimraf allure results"
+  },
+  "dependencies": {
+    "allure-commandline": "^2.25.0",
+    "chai": "^4.3.10",
+    "exceljs": "^4.4.0"
+  }
+}
