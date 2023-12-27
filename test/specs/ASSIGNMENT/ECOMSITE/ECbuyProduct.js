@@ -27,6 +27,7 @@ await browser.$('//div[@class="navbar_searchContainer__OTL+U"]//*[name()="svg"]'
 await browser.pause(2000)
 await browser.$('//a[@id="men"]').click()
 await browser.pause(2000)
+await browser.pause(2000)
 
 
 
