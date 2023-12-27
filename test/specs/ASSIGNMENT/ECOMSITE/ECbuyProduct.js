@@ -23,6 +23,7 @@ await browser.pause(2000)
 await browser.$('//input[@id="search"]').setValue("levis")
 await browser.pause(2000)
 await browser.$('//div[@class="navbar_searchContainer__OTL+U"]//*[name()="svg"]').click()
+
 await browser.pause(2000)
 await browser.$('//a[@id="men"]').click()
 await browser.pause(2000)
